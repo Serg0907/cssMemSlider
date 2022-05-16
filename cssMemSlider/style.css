@@ -137,4 +137,46 @@ label:active span {
   margin-left: auto;
 }
 
+@media screen and (max-width: 767px) {
+  input, label {
+    grid-column: 1;
+    grid-row: 2/3;
+  }
 
+  .img {
+    grid-column: 1;
+    grid-row: 1/1;
+  }
+
+  .text {
+    grid-column: 1;
+    grid-row: 3/4;
+  }
+
+  .tabs label {
+    margin: 1rem auto 0.75rem!important;
+  }
+
+  .tabs .label-1 {
+    transform: translateX(-3.375rem);
+  }
+
+  .tabs .label-2 {
+    transform: translateX(-1.125rem);
+  }
+
+  .tabs .label-3 {
+    transform: translateX(1.125rem);
+  }
+
+  .tabs .label-4 {
+    transform: translateX(3.375rem);
+  }
+
+  .img {
+    margin-bottom: 0;
+  }
+  .text {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,140 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* Georgia */
+@font-face {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('./../cssMemSlider/assets/fonts/georgia.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./../cssMemSlider/assets/fonts/georgia.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+  font-family: 'Georgia';
+  background-color: #000000;
+  line-height: 1.3rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    padding: 0 3%;
+}
+
+.tabs {
+  font-size: 0;
+  max-width: 50rem;
+  margin: 3% auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+input, label {
+  grid-column: 2;
+  grid-row: 2/3;
+}
+
+.img {
+  grid-column: 1/3;
+  max-width: 100%;
+  border-radius: 1%;
+  margin-bottom: 2%;
+}
+
+.text {
+  grid-column: 1;
+  grid-row: 2/3;
+  padding-top: 0.5rem;
+}
+
+.tabs>input[type="radio"] {
+  display: none;
+} 
+
+.tabs>div, .tabs>img {
+    display: none;
+    font-size: 1rem;
+    opacity: 0;
+}
+
+#tab-btn-1:checked~.content_1,
+#tab-btn-2:checked~.content_2,
+#tab-btn-3:checked~.content_3,
+#tab-btn-4:checked~.content_4 {
+  display: block;
+  opacity: 1;
+  animation: display-none-transition 1s both;
+}
+
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}  
+
+.tabs .label-3 {
+  margin-right: 2.25rem;
+}
+
+.tabs .label-2 {
+  margin-right: 4.5rem;
+}
+
+.tabs .label-1 {
+  margin-right: 6.75rem;
+}
+
+.tabs>label>span {
+  display: block;
+  user-select: none;
+  border: 0.0625rem solid #f5f5f5;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  cursor: pointer;
+  width: 1.063rem;
+  height: 1.063rem;
+  border-radius: 50%;
+}
+
+label:active span {
+  background-color: #a8a8a8!important;
+  border: 0;
+}
+
+#tab-btn-1:checked~.label-1>span,
+#tab-btn-2:checked~.label-2>span,
+#tab-btn-3:checked~.label-3>span,
+#tab-btn-4:checked~.label-4>span {
+  background-color: #00addd;
+  border: 0;
+}
+
+.tabs>label:hover>span {
+  background-color: #ffffff;
+}
+
+.tabs>label:not(:first-of-type) {
+  border-left: none;
+}
+
+
+.tabs label {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.59rem;
+  cursor: pointer;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+
